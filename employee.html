@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>员工管理</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="author" content="">
+		<meta name="keywords" content="">
+		<link href="css/base.css" type="text/css" rel="stylesheet" />
+		<link href="css/editTable.css" type="text/css" rel="stylesheet" />
+		
+		<script  type="text/javascript" src="jquery-1.7.2.min.js"></script>
+		<script  type="text/javascript" src="editTable.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="base.css">
+	
+	<link rel="stylesheet" type="text/css" href="editTable.css">
+	
+	
+	<script>
+	function newDocworktime(){
+
+		window.location.assign("http://localhost:8080/Manage/worktime.html")
+
+		}
+
+
+	function project(){
+
+		window.location.assign("http://localhost:8080/Manage/project.html")
+
+		}
+	
+	</script>
+	
+	
+	</head>
+
+	<body>
+		<table class="edtitable">
+			<thead>
+				<tr>
+					<input type="button" id="addBtn1" value="项目管理" onclick="project()"/>
+					<input type="button" id="addBtn1" value="工时" onclick="newDocworktime()"/>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>员工编号</th>
+					<th>员工姓名</th>
+					<th>性别</th>
+					<th>部门</th>
+					<th>入职日期</th>
+					<th>籍贯</th>
+					<th class="del-col">操作</th>
+				</tr>
+				<tr>
+					<td>111</td>
+					<td>张三</td>
+					<td>男</td>
+					<td>开发一部</td>
+					<td>2019.01.01</td>
+					<td>山西</td>
+					<td class="del-col">
+						<a href="javascript:void(0);" class="delBtn">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>222</td>
+					<td>李四</td>
+					<td>男</td>
+					<td>开发二部</td>
+					<td>2017.03.08</td>
+					<td>陕西</td>
+					<td class="del-col">
+						<a href="javascript:void(0);" class="delBtn">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>333</td>
+					<td>张无忌</td>
+					<td>男</td>
+					<td>开发一部</td>
+					<td>2016.12.08</td>
+					<td>花果山</td>
+					<td class="del-col">
+						<a href="javascript:void(0);" class="delBtn">删除</a>
+					</td>
+				</tr>
+				
+				</tr>
+				<tr class="append-row">
+					<td colspan="7" align="right">
+						<input type="button" id="addBtn" value="添 加" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</body>
+
+</html>

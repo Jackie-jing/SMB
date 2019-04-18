@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>工时</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="author" content="">
+		<meta name="keywords" content="">
+		<link href="css/base.css" type="text/css" rel="stylesheet" />
+		<link href="css/editTable.css" type="text/css" rel="stylesheet" />
+		
+		<script  type="text/javascript" src="jquery-1.7.2.min.js"></script>
+		<script  type="text/javascript" src="editTable.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="base.css">
+	
+	<link rel="stylesheet" type="text/css" href="editTable.css">
+	
+	<script>
+	function employee(){
+
+		window.location.assign("http://localhost:8080/Manage/employee.html")
+
+		}
+
+
+	function project(){
+
+		window.location.assign("http://localhost:8080/Manage/project.html")
+
+		}
+	
+	</script>
+	
+	
+	
+	</head>
+
+	<body>
+		<table class="edtitable">
+			<thead>
+				<tr>
+					<input type="button" id="addBtn1" value="项目管理" onclick="project()" />
+					<input type="button" id="addBtn1" value="员工管理" onclick="employee()"/>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>员工名称</th>
+					<th>项目名称</th>
+					<th>项目代码</th>
+					<th>工时(h)</th>
+					<th>工作内容</th>
+					<th>日期</th>
+					<th class="del-col">操作</th>
+				</tr>
+				<tr>
+					<td>张无忌</td>
+					<td>项目1</td>
+					<td>X789</td>
+					<td>8</td>
+					<td>发布页面</td>
+					<td>2019.04.11</td>
+					<td class="del-col">
+						<a href="javascript:void(0);" class="delBtn">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>张三</td>
+					<td>项目1</td>
+					<td>X326</td>
+					<td>8</td>
+					<td>新建页面</td>
+					<td>2019.04.10</td>
+					<td class="del-col">
+						<a href="javascript:void(0);" class="delBtn">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>李四</td>
+					<td>项目2</td>
+					<td>X519</td>
+					<td>8</td>
+					<td>编辑页面</td>
+					<td>2019.04.9</td>
+					<td class="del-col">
+						<a href="javascript:void(0);" class="delBtn">删除</a>
+					</td>
+				</tr>
+				
+				<tr class="append-row">
+					<td colspan="7" align="right">
+						<input type="button" id="addBtn" value="添 加" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue tab 登录</title>
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<script type="text/javascript" src="js/html5shiv.min.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+            el: "#app",
+            data: {
+                cur:0 //默认选中第一个tab
+            }
+        });    
+
+	function employee(){
+
+		window.location.assign("http://localhost:8080/Manage/employee.html")
+
+		}
+		    
+</script>
+
+</head>
+<body>
+	<div id="app">
+		<div class="login_warp">
+			<div class="loginbox fl">
+				<div class="login_header">
+					
+					
+				</div>
+				<div class="login_content">
+					<div v-show="cur==0" class="Cbody_item">
+						<div class="form_item"><input type="text" name="fname" placeholder="用户名"></div>
+						<div class="form_item"><input type="password" name="fpassword" placeholder="密码"></div>
+						<div class="form_item">
+							<div class="fl"><input type="checkbox">记住密码</div>
+							<div class="fr"><a href="javascript:;">找回密码</a></div>
+						</div>
+						<div class="clear"></div>
+						<div class="form_item">
+							<input type="submit" name="" value="登录" onclick="employee()" >
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+			<div class="loginrslider fl"></div>
+		</div>
+	</div>
+</body>
+</html>
